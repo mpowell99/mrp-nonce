@@ -20,16 +20,30 @@
 if (!class_exists('MRP_Nonce')) {
     class MRP_Nonce {
         private $mrp_nonce;
+        private $ays_string = 'Are You Sure?';
 
+        /* The Nonce string is created when the object is instantiated */
         public function __construct() {
             $this->mrp_nonce = wp_create_nonce();
         }
 
+        /* Return the Nonce string */
         public function get_nonce() {
             return($this->mrp_nonce);
         }
-        public function are_you_sure($action) {
+
+        public function show_ays($action) {
             wp_nonce_ays($action);
+        }
+
+        /* Retrieve the Are You Sure string */
+        public function get_ays() {
+            return($this->ays_string);
+        }
+
+        /* Set the Are You Sure string */
+        public function set_ays($string) {
+            $this->ays_string = $string;
         }
     }
 }
