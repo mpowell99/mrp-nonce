@@ -11,6 +11,7 @@
  *   1. Make sure plugin is installed
  *   2. Enter mp-nonce/tests/ directory
  *   3. # wp eval-file test1.php
+ *
  */
 
 $mynonce = new MRP_Nonce();
@@ -18,13 +19,11 @@ $mynonce = new MRP_Nonce();
 echo "Getting Nonce: ";
 echo $mynonce->get_nonce()."\n\n";
 
-/*
-echo "Displaying AYS Message\n";
-$mynonce->show_ays('log-out');
-*/
-
 echo "Getting Nonce Name: ";
 echo $mynonce->get_nonce_name()."\n\n";
+
+// echo "Showing Are You Sure Message for Logout: ";
+// echo $mynonce->show_ays('log-out')."\n\n";
 
 echo "Getting Hidden Field for Form\n";
 echo $mynonce->get_nonce_field()."\n\n";

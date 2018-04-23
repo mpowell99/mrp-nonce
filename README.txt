@@ -14,12 +14,12 @@ A simple object-oriented implementation of Wordpress Nonces
 Provides developers with an OO approach to Wordpress nonces. Implements
 existing Wordpress Nonce functions inside a class named MRP_Nonce.
 
-Nonces are created when an object is instantiated. Public functions allow
+Nonces are created when an object is instantiated. Public methods allow
 users to:
     *retrieve the nonce
     *view or modify "nonce names" (for form fields or URL parameters)
-    *display the are-you-sure (ays) messages for certain actions
     *verify the validity of the nonce
+    *display the are-you-sure (ays) messages for certain actions
 
 
 == Installation ==
@@ -30,8 +30,13 @@ users to:
 
 == Changelog ==
 
-= 1.1 =
-* Added a few functions, for nonce-verification and name-setting
+= 1.2.0 =
+* Added the ability to set the action assigned to the nonce, in the
+  class constructor
+* Added ability to set the lifetime of the nonce
 
-= 1.0 =
-* Initial Commit. Just a couple functions at this point.
+= 1.1.0 =
+* Added a few methods for nonce-verification and name-setting
+
+= 1.0.0 =
+* Initial Commit. Just a couple methods at this point.
